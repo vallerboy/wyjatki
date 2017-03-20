@@ -13,11 +13,16 @@ public class NewCat {
     private int age;
     private String color;
 
-    public NewCat(Builder builder){
+
+    private NewCat(Builder builder){
         name = builder.name;
         owner = builder.owner;
         age = builder.age;
         color = builder.color;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public String getName() {

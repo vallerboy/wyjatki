@@ -22,9 +22,6 @@ public class SomeClient implements Observer {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public void update() {

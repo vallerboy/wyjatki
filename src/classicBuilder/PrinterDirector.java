@@ -13,6 +13,7 @@ public class PrinterDirector {
     private PrinterBuilder printerBuilder;
 
     public PrinterDirector(PrinterBuilder printerBuilder) {
+
         this.printerBuilder = printerBuilder;
     }
 
