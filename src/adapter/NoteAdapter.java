@@ -28,7 +28,7 @@ public class NoteAdapter implements OldInterface {
 
     @Override
     public void addNote(String note) {
-       newNote.addNote(note, null);
+        newNote.addNote(note, null);
     }
 
     @Override
@@ -40,4 +40,9 @@ public class NoteAdapter implements OldInterface {
     public List<String> getAllNotes() {
         return noteList;
     }
+
+    public void addNote(String note, String toWho){
+        newNote.addNote(note, toWho);
+    }
+
 }

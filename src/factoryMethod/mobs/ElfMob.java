@@ -22,7 +22,7 @@ public class ElfMob extends Mob {
 
     @Override
     public void attack() {
-        System.out.println("ATAKUJE!");
+        System.out.println("ATAKUJE W SPOSOB ELFLOWSKI!");
     }
 
     @Override

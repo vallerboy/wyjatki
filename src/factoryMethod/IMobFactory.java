@@ -9,4 +9,6 @@ package factoryMethod;
  */
 public interface IMobFactory {
     Mob produceMob(MobType mobType);
+    Mob produceMob(MobType mobType, int strenght);
+    Mob produceMob(MobType mobType, int strenght, int multiplySpeed);
 }

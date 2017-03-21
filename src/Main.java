@@ -1,5 +1,10 @@
-import observer.Subscriber;
-import observer.YTCanal;
+import factoryMethod.IMobFactory;
+import factoryMethod.Mob;
+import factoryMethod.MobFactory;
+import factoryMethod.MobType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by OskarPraca on 2017-03-18.
@@ -35,27 +40,29 @@ public class Main {
 
         // Implementacja Observera
 
-        Subscriber subscriber1 = new Subscriber("Oskar");
-        YTCanal ytCanal = new YTCanal();
-        ytCanal.register(subscriber1);
-        ytCanal.publishFilm();
-        Subscriber subscriber2 = new Subscriber("Wojtek");
-        ytCanal.register(subscriber2);
-        Subscriber subscriber3 = new Subscriber("Krystian");
-        ytCanal.register(subscriber3);
-        ytCanal.publishFilm();
-
-        System.out.println("Ilość filmów do obejrzenia: " + subscriber1.getNewFilms());
-        System.out.println("Ilość filmów do obejrzenia: " + subscriber3.getNewFilms());
+//        Subscriber subscriber1 = new Subscriber("Oskar");
+//        YTCanal ytCanal = new YTCanal();
+//        ytCanal.register(subscriber1);
+//        ytCanal.publishFilm();
+//        Subscriber subscriber2 = new Subscriber("Wojtek");
+//        ytCanal.register(subscriber2);
+//        Subscriber subscriber3 = new Subscriber("Krystian");
+//        ytCanal.register(subscriber3);
+//        ytCanal.publishFilm();
+//
+//        System.out.println("Ilość filmów do obejrzenia: " + subscriber1.getNewFilms());
+//        System.out.println("Ilość filmów do obejrzenia: " + subscriber3.getNewFilms());
 
 
 
         // Implementacja metody wytwórczej
 
-//        IMobFactory factory = new MobFactory();
-//        Mob mob =  factory.produceMob(MobType.ORK);
-//        mob.attack();
-//
+        IMobFactory factory = new MobFactory();
+
+        List<Mob> areaOfCombat = new ArrayList<>();
+        areaOfCombat.add(factory.produceMob(MobType.MAG));
+        areaOfCombat.add(factory.produceMob(MobType.ORK));
+
         // Implementacja adaptera
 
 
@@ -63,13 +70,14 @@ public class Main {
 //        NoteAdapter note = new NoteAdapter();
 //        note.addNote("Dziś jest piękny dzień, zajmujemy się wzorcami :)");
 //        note.addNote("Odebrać dzieciaka z przedszkola!");
+//        note.addNote("Moja notatka", "Do mamy");
 //
 //        // wydrukuj wszystiie notatki
 //
 //        for(String s : note.getAllNotes()){
 //            System.out.println(s);
 //        }
-
+//
 
 
 
